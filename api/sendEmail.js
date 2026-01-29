@@ -94,6 +94,8 @@ export default async function handler(req, res) {
       })
     });
 
+    // console.log("respponse : ",response)
+
     if (!response.ok) {
       const errorText = await response.text();
       throw new Error(errorText);
